@@ -1,5 +1,5 @@
 // Saves the current Photoshopfile as a low res jpg, 
-// then imports the saved file and places it in a new layer with the blendmode set to difference,
+// then imports the saved file and places it in a new layer with its blendmode set to difference,
 // and finally it merges all visible layers.
 // In most cases the result will need some leveling.
 
