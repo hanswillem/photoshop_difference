@@ -3,7 +3,7 @@
 // and finally it merges all visible layers.
 // In most cases the result will need some leveling.
 
-var myFile = '~/Documents/Photoshop Difference Script/lowResJPEG.jpg';
+var myFile = '~/Desktop/lowResJPEG.jpg';
 
 // save the lowres jpeg
 function saveJPEG( doc, saveFile, qty ) {
