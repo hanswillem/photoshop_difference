@@ -1,3 +1,8 @@
+// Saves the current Photoshopfile as a low res jpg, 
+// then imports the saved file and places it in a new layer with the blendmode set to difference,
+// Then it merges all layers.
+// In most cases the result will need some leveling.
+
 var myFile = '~/Documents/Photoshop Difference Script/lowResJPEG.jpg';
 
 function saveJPEG( doc, saveFile, qty ) {
