@@ -1,10 +1,11 @@
 // Saves the current Photoshopfile as a low res jpg, 
 // then imports the saved file and places it in a new layer with the blendmode set to difference,
-// Then it merges all layers.
+// and finally it merges all visible layers.
 // In most cases the result will need some leveling.
 
 var myFile = '~/Documents/Photoshop Difference Script/lowResJPEG.jpg';
 
+// save the lowres jpeg
 function saveJPEG( doc, saveFile, qty ) {
      var saveOptions = new JPEGSaveOptions( );
      saveOptions.embedColorProfile = true;
@@ -15,7 +16,7 @@ function saveJPEG( doc, saveFile, qty ) {
 }
 saveJPEG( app.activeDocument, new File(myFile), 0 );
 
-
+// open the lowres jpeg, place it into new layer and set blendmode to difference
 app.load(new File(myFile));
 backFile= app.activeDocument; 
 backFile.selection.selectAll();
@@ -23,6 +24,5 @@ backFile.selection.copy();
 backFile.close(SaveOptions.DONOTSAVECHANGES); 
 app.activeDocument.paste();
 app.activeDocument.layers[0].name = "BackgroundImage";
-
 app.activeDocument.layers[0].blendMode = BlendMode.DIFFERENCE;
 app.activeDocument.mergeVisibleLayers();
