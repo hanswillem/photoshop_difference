@@ -3,6 +3,7 @@
 // and finally it merges all visible layers.
 // In most cases the result will need some leveling.
 
+// stating the obvious, but change this path to match your machine
 var myFile = '~/Desktop/lowResJPEG.jpg';
 
 // save the lowres jpeg
