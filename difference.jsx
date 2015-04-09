@@ -1,7 +1,9 @@
-// Saves the current Photoshopfile as a low res jpg, 
-// then imports the saved file and places it in a new layer with its blendmode set to difference,
-// and finally it merges all visible layers.
-// In most cases the result will need some leveling.
+/*
+Saves the current Photoshopfile as a low res jpg, 
+then imports the saved file and places it in a new layer with its blendmode set to difference,
+and finally it merges all visible layers.
+In most cases the result will need some leveling.
+*/
 
 // stating the obvious, but change this path to match your machine
 var myFile = '~/Desktop/lowResJPEG.jpg';
