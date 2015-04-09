@@ -21,7 +21,7 @@ saveJPEG( app.activeDocument, new File(myFile), 0 );
 
 // open the lowres jpeg, place it into new layer and set blendmode to difference
 app.load(new File(myFile));
-backFile= app.activeDocument; 
+backFile = app.activeDocument; 
 backFile.selection.selectAll();
 backFile.selection.copy();
 backFile.close(SaveOptions.DONOTSAVECHANGES); 
