@@ -6,7 +6,7 @@ This process is then repeated once more.
 */
 
 // stating the obvious, but change this path to match your machine
-var myFile = '~/Documents/Photoshop Difference Script/lowResJPEG.jpg';
+var myFile = '~/Desktop/lowResJPEG.jpg';
 
 for (var i=0; i<2; i++) {
     // save the lowres jpeg
