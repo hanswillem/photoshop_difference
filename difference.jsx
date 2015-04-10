@@ -6,7 +6,7 @@ The user is being prompted how many times this should be performed.
 */
 
 // stating the obvious, but change this path to match your machine
-var myFile = '~/Documents/Photoshop Difference Script/lowResJPEG.jpg';
+var myFile = '~/Desktop/lowResJPEG.jpg';
 
 // merge all layers when there is more than 1 layer
 if (app.activeDocument.layers.length > 1) {
