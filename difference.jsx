@@ -1,5 +1,5 @@
 /*
-Saves the current Photoshopfile as a low res jpg,
+Saves the current Photoshop file as a low res jpg,
 then imports the saved file and places it in a new layer with its blendmode set to difference.
 Then it merges all visible layers and applies some levelling.
 The user is being prompted how many times this should be performed.
