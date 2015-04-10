@@ -9,7 +9,7 @@ The user is being prompted how many times this should be performed.
 var myFile = '~/Documents/Photoshop Difference Script/lowResJPEG.jpg';
 
 // merge all layers when there is more than 1 layer
-if (app.activeDocument.layers > 1) {
+if (app.activeDocument.layers.length > 1) {
     app.activeDocument.mergeVisibleLayers();
 }
 
@@ -42,3 +42,4 @@ for (var i=0; i<count; i++) {
     // apply levels
     app.activeDocument.layers[0].adjustLevels(0, 45, 1, 0, 255);
 }
+
