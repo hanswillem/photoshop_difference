@@ -8,8 +8,12 @@ The user is being prompted how many times this should be performed.
 // stating the obvious, but change this path to match your machine
 var myFile = '~/Documents/Photoshop Difference Script/lowResJPEG.jpg';
 
-app.activeDocument.mergeVisibleLayers();
+// merge all layers when there is more than 1 layer
+if (app.activeDocument.layers > 1) {
+    app.activeDocument.mergeVisibleLayers();
+}
 
+// prompt the user
 var count = prompt('How many itterations?', '2');
 
 for (var i=0; i<count; i++) {
@@ -24,7 +28,7 @@ for (var i=0; i<count; i++) {
     }
     saveJPEG( app.activeDocument, new File(myFile), 0);
 
-    // open the lowres jpeg, place it into new layer and set blendmode to difference
+    // open the lowres jpeg, place it into new layer and set its blendmode to difference
     app.load(new File(myFile));
     backFile = app.activeDocument;
     backFile.selection.selectAll();
