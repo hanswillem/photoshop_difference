@@ -11,14 +11,12 @@ var myFile = '~/Desktop/lowResJPEG.jpg';
 // merge all layers when there is more than 1 layer
 if (app.activeDocument.layers.length > 1) {
     app.activeDocument.mergeVisibleLayers();
+    //app.activeDocument.layers[0].duplicate();
+    //app.activeDocument.layers[1].visible = false;
 }
 
-// prompt the user
-var count = prompt('How many itterations?', '2');
-
-for (var i=0; i<count; i++) {
-    // save the lowres jpeg
-    function saveJPEG(doc, saveFile, qty) {
+// function to save as JPEG
+function saveJPEG(doc, saveFile, qty) {
          var saveOptions = new JPEGSaveOptions();
          saveOptions.embedColorProfile = true;
          saveOptions.formatOptions = FormatOptions.STANDARDBASELINE;
@@ -26,6 +24,12 @@ for (var i=0; i<count; i++) {
          saveOptions.quality = qty;
          doc.saveAs(saveFile, saveOptions, true);
     }
+
+// prompt the user
+var count = prompt('How many itterations?', '2');
+
+for (var i=0; i<count; i++) {
+    // save the lowres jpeg
     saveJPEG( app.activeDocument, new File(myFile), 0);
 
     // open the lowres jpeg, place it into new layer and set its blendmode to difference
