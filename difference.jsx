@@ -9,7 +9,7 @@ The user is being prompted how many times this should be performed.
 var myFile = '~/Desktop/lowResJPEG.jpg';
 
 // suspend history so there is a single undo for the entire script
-app.activeDocument.suspendHistory("something", "main()");
+app.activeDocument.suspendHistory("Difference", "main()");
 
 function main () {
     // merge all layers when there is more than 1 layer
